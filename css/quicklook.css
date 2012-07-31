@@ -1,0 +1,84 @@
+/* @override http://wordpress.pro/content/themes/aurer_v2/css/quicklook.css */
+
+/* @override http://wordpress.pro/content/themes/aurer_v2/css/quicklook.css */
+
+#quicklookwindow,
+#quicklookcover{
+	position: absolute;
+	z-index: 100;
+}
+#quicklookwindow{
+	display: none;
+	background:#000;
+	background:rgba(0,0,0,0.8);
+	border-radius: 4px;
+}
+#quicklookwindow.loading{
+	opacity: .8;
+}
+#quicklookwindow.error{
+	background: #efefef url(404.png) no-repeat center center;
+}
+#quicklookcover{
+	position: fixed;
+	background: rgba(0,0,0,0.9);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+#quicklookinner{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+#quicklookinner span.loading{
+	position: absolute;
+	left:0;
+	top: 40%;
+	width: 100%;
+	text-align: center;
+	background: #000;
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	padding: 10px 0;
+	z-index: 100;
+}
+#quicklookinner img{
+	border-radius: 4px;
+}
+#quicklookmast{
+	position: absolute;
+	color: #fff;
+	padding: 10px;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+#quicklookmast .title{
+	text-align: center;
+}
+#quicklookclose{
+	cursor:  pointer;
+	position: absolute;
+	left: 4px;
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	background: url(close.png) no-repeat center center;
+}
+#quicklookloader{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 5px;
+	margin: -17px 0  0 -17px;
+	background: url(loop.gif);
+}
