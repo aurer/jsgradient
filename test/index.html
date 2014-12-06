@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Gradient testpage</title>
+	<style>
+		html,
+		body{
+			padding:1em;
+			margin:0;
+			background: #222;
+			color: #eee;
+			font-family: sans-serif;
+		}
+		.page{
+			max-width: 30em;
+			margin: auto;
+		}
+		ul{
+			padding: 0;
+			margin: 0 0 2em;
+			list-style: none;
+		}
+		li{
+			padding: 10px;
+			color: #000;
+			border-top: 1px solid rgba(255,255,255,0.2);
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+			font-size: 13px;
+			font-weight: bold;
+		}
+		h2{
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+	<div class="page">
+		<h2>DOM Element</h2>
+		<ul id="dom">
+		  <li>Ain't No Man Righteous, No Not One</li>
+		  <li>Ain't No More Cane</li>
+		  <li>Ain't Talkin'</li>
+		  <li>Alberta</li>
+		  <li>All Along The Watchtower  </li>
+		</ul>
+	
+		<h2>String selector</h2>
+		<ul id="string">
+		  <li>Ain't No Man Righteous, No Not One</li>
+		  <li>Ain't No More Cane</li>
+		  <li>Ain't Talkin'</li>
+		  <li>Alberta</li>
+		  <li>All Along The Watchtower  </li>
+		</ul>
+
+		<h2>Indirect decendant list element</h2>
+		<div id="deep">
+			<div class="inner">
+				<ul>
+				  <li>Ain't No Man Righteous, No Not One</li>
+				  <li>Ain't No More Cane</li>
+				  <li>Ain't Talkin'</li>
+				  <li>Alberta</li>
+				  <li>All Along The Watchtower  </li>
+				</ul>
+			</div>
+		</div>
+	
+		<h2>Small list</h2>
+		<ul id="small">
+		  <li>Ain't No Man Righteous, No Not One</li>
+		  <li>Ain't No More Cane</li>
+		  <li>All Along The Watchtower  </li>
+		</ul>
+
+		<h2>Subtle gradient</h2>
+		<ul id="subtle">
+		  <li>Ain't No Man Righteous, No Not One</li>
+		  <li>Ain't No More Cane</li>
+		  <li>Ain't Talkin'</li>
+		  <li>Alberta</li>
+		  <li>All Along The Watchtower  </li>
+		  <li>All I Really Want To Do </li>
+		  <li>All Over You  </li>
+		  <li>All The Tired Horses</li>
+		</ul>
+	</div>
+
+	<script src="../js/jsGradient.js"></script>
+	<script>
+		// Call passing a DOM element
+		jsgradient.gradientList('#A2CAC2', '#4C6C83', document.querySelector('#dom'));
+
+		// Call with a string as selector
+		jsgradient.gradientList('#A2CAC2', '#4C6C83', '#string');
+
+		// Indirect decendant list element
+		jsgradient.gradientList('#A2CAC2', '#4C6C83', '#deep');
+		
+		// Small gradient
+		jsgradient.gradientList('#A2CAC2', '#4C6C83', '#small');
+
+		// Subltle gradient
+		jsgradient.gradientList('#A2CAC2', '#608292', '#subtle');
+	</script>
+</body>
+</html>
