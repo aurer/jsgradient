@@ -80,12 +80,15 @@ jsgradient = {
 	},
 	
 	gradientList : function(colorA, colorB, list){
-		var list = (typeof list === 'object')? list : $(list),
-			listItems = list.find('li'),
+		var list = (typeof list === 'object')? list : document.querySelector(list);
+		
+		var listItems = list.querySelectorAll('li'),
 			steps  = listItems.length,
 			colors = jsgradient.generateGradient(colorA, colorB, steps);
-		listItems.each(function(i){
-			$(this).css('backgroundColor', colors[i]);
-		});
+
+		for (var i = 0; i < listItems.length; i++) {
+			var item = listItems[i];
+			item.style.backgroundColor = colors[i];
+		};
 	}
 }
