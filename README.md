@@ -5,7 +5,9 @@ The easiest way to implement a gradient is by calling the gradientList() functio
 
     jsgradient.gradientList('#07E3F2', '#155994', '#demo');
 
-You can pass in the colors in the following formats: ‘fff’, ‘#fff’, ‘ffffff’ or ‘#ffffff’. The list element can also be passed in as a string e.g. ‘#demo’ or as a jquery object e.g. $(‘#demo’);
+You can pass in the colors in the following formats: ‘fff’, ‘#fff’, ‘ffffff’ or ‘#ffffff’. The list element can also be passed in as a string like above or as a DOM element e.g.
+
+	jsgradient.gradientList('#07E3F2', '#155994', document.querySelector('#demo'));
 
 You can also call the generateGradient() function as the example below shows and this will return the array of hex colors for you do use however you like.
 
