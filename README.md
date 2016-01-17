@@ -1,4 +1,4 @@
-# Quicklook.js
+# jsgradient.js
 
 The jsgradient plugin
 The easiest way to implement a gradient is by calling the gradientList() function, specifying the start color, end color and list element you want to style like so:
